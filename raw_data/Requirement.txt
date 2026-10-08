@@ -1,0 +1,7 @@
+Run certain set of commands
+
+
+Cloud/Cluster -> Linux VM -> Some Parameter fluctuating or KPI going high or low -> Trigger an alarm
+
+
+Additional - Mail me the alarms or  Logs or summary sent in DB

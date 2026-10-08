@@ -1,0 +1,492 @@
+alarm_id,timestamp,node,node_type,alarm_code,alarm_name,severity,type,description,status
+ALM-NOISE-0238,2026-10-08T00:17:12Z,LINK-B,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0060,2026-10-08T00:27:54Z,CMG-01,CMG,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0166,2026-10-08T00:30:07Z,UPF-02,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0088,2026-10-08T00:41:05Z,CMG-03,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0108,2026-10-08T00:46:02Z,LINK-A,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0059,2026-10-08T00:46:44Z,LINK-A,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0057,2026-10-08T00:49:13Z,CMG-03,CMG,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0096,2026-10-08T01:04:26Z,UPF-01,UPF,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0087,2026-10-08T01:09:05Z,CMG-02,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0163,2026-10-08T01:09:08Z,UPF-02,UPF,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0162,2026-10-08T01:14:18Z,CMG-03,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0175,2026-10-08T01:15:04Z,CMG-01,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0129,2026-10-08T01:21:03Z,CMG-01,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0042,2026-10-08T01:22:37Z,LINK-A,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0043,2026-10-08T01:26:02Z,LINK-A,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0142,2026-10-08T01:26:32Z,LINK-A,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0229,2026-10-08T01:32:32Z,CMG-02,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0105,2026-10-08T01:35:17Z,UPF-02,UPF,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0077,2026-10-08T01:45:32Z,LINK-A,Transport,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0165,2026-10-08T01:47:46Z,CMG-02,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0078,2026-10-08T01:47:55Z,UPF-02,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0012,2026-10-08T01:56:52Z,UPF-02,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0048,2026-10-08T01:59:25Z,CMG-02,CMG,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0206,2026-10-08T02:09:33Z,CMG-03,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0111,2026-10-08T02:21:39Z,CMG-03,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0219,2026-10-08T02:26:11Z,UPF-02,UPF,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0141,2026-10-08T02:26:37Z,UPF-02,UPF,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0065,2026-10-08T02:28:51Z,UPF-01,UPF,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0063,2026-10-08T02:30:26Z,UPF-01,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0194,2026-10-08T02:37:30Z,CMG-01,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0092,2026-10-08T02:42:57Z,LINK-A,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0006,2026-10-08T02:46:35Z,UPF-01,UPF,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0074,2026-10-08T02:52:37Z,CMG-02,CMG,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0010,2026-10-08T02:56:49Z,UPF-02,UPF,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0134,2026-10-08T03:02:44Z,CMG-03,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0051,2026-10-08T03:05:23Z,LINK-A,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0023,2026-10-08T03:08:13Z,UPF-02,UPF,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0007,2026-10-08T03:16:10Z,LINK-A,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0244,2026-10-08T03:16:25Z,UPF-01,UPF,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0192,2026-10-08T03:20:24Z,LINK-B,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0228,2026-10-08T03:24:23Z,LINK-B,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0127,2026-10-08T03:32:44Z,UPF-02,UPF,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0039,2026-10-08T03:44:42Z,LINK-B,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0085,2026-10-08T03:46:39Z,LINK-B,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0045,2026-10-08T03:47:02Z,CMG-01,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0041,2026-10-08T03:57:06Z,CMG-02,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0115,2026-10-08T04:10:41Z,LINK-A,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0009,2026-10-08T04:16:51Z,UPF-01,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0168,2026-10-08T04:27:45Z,CMG-01,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0199,2026-10-08T04:30:51Z,UPF-02,UPF,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0139,2026-10-08T04:38:58Z,LINK-A,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0038,2026-10-08T04:48:29Z,LINK-B,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0052,2026-10-08T04:56:19Z,LINK-B,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0084,2026-10-08T04:56:57Z,CMG-01,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0054,2026-10-08T05:00:37Z,UPF-02,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0218,2026-10-08T05:01:59Z,CMG-01,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0190,2026-10-08T05:05:35Z,CMG-01,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0224,2026-10-08T05:14:04Z,CMG-01,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0112,2026-10-08T05:18:09Z,CMG-03,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0189,2026-10-08T05:21:14Z,LINK-A,Transport,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0248,2026-10-08T05:23:09Z,LINK-B,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0123,2026-10-08T05:35:28Z,UPF-01,UPF,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0121,2026-10-08T05:38:16Z,UPF-01,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0083,2026-10-08T05:40:24Z,CMG-03,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0156,2026-10-08T05:49:05Z,LINK-B,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0113,2026-10-08T06:12:07Z,UPF-01,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0116,2026-10-08T06:15:11Z,LINK-B,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0047,2026-10-08T06:24:42Z,CMG-02,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0131,2026-10-08T06:38:30Z,UPF-01,UPF,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0103,2026-10-08T06:44:31Z,UPF-01,UPF,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0220,2026-10-08T06:45:17Z,CMG-02,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0075,2026-10-08T06:47:26Z,CMG-02,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0086,2026-10-08T06:50:52Z,LINK-B,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0209,2026-10-08T07:06:22Z,LINK-B,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0015,2026-10-08T07:08:15Z,CMG-02,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0016,2026-10-08T07:10:01Z,CMG-03,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0106,2026-10-08T07:12:15Z,UPF-01,UPF,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0005,2026-10-08T07:16:16Z,LINK-B,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0093,2026-10-08T07:16:55Z,UPF-02,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0046,2026-10-08T07:18:06Z,CMG-01,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0147,2026-10-08T07:19:29Z,LINK-A,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0119,2026-10-08T07:19:44Z,CMG-03,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0246,2026-10-08T07:31:06Z,CMG-02,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0107,2026-10-08T07:32:46Z,UPF-02,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0091,2026-10-08T07:50:40Z,CMG-02,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0100,2026-10-08T07:56:15Z,UPF-01,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0242,2026-10-08T08:04:25Z,UPF-01,UPF,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0222,2026-10-08T08:16:37Z,CMG-02,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0207,2026-10-08T08:20:02Z,LINK-B,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0032,2026-10-08T08:21:01Z,LINK-B,Transport,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0114,2026-10-08T08:22:04Z,CMG-02,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0072,2026-10-08T08:22:12Z,CMG-01,CMG,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0066,2026-10-08T08:32:07Z,LINK-A,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0132,2026-10-08T08:39:48Z,CMG-03,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0191,2026-10-08T08:44:09Z,LINK-A,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0153,2026-10-08T08:50:55Z,CMG-01,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0128,2026-10-08T08:53:05Z,LINK-A,Transport,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0157,2026-10-08T08:54:51Z,CMG-01,CMG,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0181,2026-10-08T09:11:41Z,CMG-02,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0223,2026-10-08T09:14:47Z,LINK-B,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0164,2026-10-08T09:17:22Z,CMG-03,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0069,2026-10-08T09:20:39Z,LINK-B,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0058,2026-10-08T09:42:04Z,UPF-02,UPF,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0247,2026-10-08T09:42:31Z,CMG-02,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0102,2026-10-08T09:45:19Z,CMG-01,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0243,2026-10-08T09:49:49Z,LINK-B,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-B,ACTIVE
+ALM-STORM1-001,2026-10-08T10:00:00Z,LINK-A,Transport,LINK_DOWN,Physical Fiber Link Down,CRITICAL,Transport,Primary fiber optical path loss of signal detected on interface Port 1/1/1,ACTIVE
+ALM-STORM1-002,2026-10-08T10:00:30Z,CMG-02,CMG,BGP_PEER_DOWN,BGP Peer Session Down,MAJOR,Protocol,BGP peer neighbor 192.168.1.1 session lost state Established -> Idle,ACTIVE
+ALM-STORM1-025,2026-10-08T10:00:51Z,CMG-03,CMG,SERVICE_DEGRADED,Service Degraded Alert,MINOR,Service,Service performance degraded on CMG-03 due to upstream transport failure,ACTIVE
+ALM-STORM1-033,2026-10-08T10:01:06Z,CMG-02,CMG,ATTACH_FAIL_HIGH,Attach Fail High Alert,WARNING,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-007,2026-10-08T10:01:15Z,CMG-02,CMG,ATTACH_FAIL_HIGH,Attach Fail High Alert,MAJOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-019,2026-10-08T10:01:24Z,CMG-02,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,MAJOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-006,2026-10-08T10:01:37Z,CMG-03,CMG,ATTACH_FAIL_HIGH,Attach Fail High Alert,WARNING,Service,Service performance degraded on CMG-03 due to upstream transport failure,ACTIVE
+ALM-STORM1-023,2026-10-08T10:01:40Z,CMG-02,CMG,BEARER_DROP,Bearer Drop Alert,WARNING,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-037,2026-10-08T10:01:44Z,CMG-02,CMG,BEARER_DROP,Bearer Drop Alert,WARNING,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-035,2026-10-08T10:01:50Z,CMG-02,CMG,ATTACH_FAIL_HIGH,Attach Fail High Alert,MAJOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-011,2026-10-08T10:02:02Z,CMG-02,CMG,BEARER_DROP,Bearer Drop Alert,MINOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-038,2026-10-08T10:02:07Z,CMG-03,CMG,BEARER_DROP,Bearer Drop Alert,MINOR,Service,Service performance degraded on CMG-03 due to upstream transport failure,ACTIVE
+ALM-STORM1-010,2026-10-08T10:02:10Z,CMG-02,CMG,BEARER_DROP,Bearer Drop Alert,MAJOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-039,2026-10-08T10:02:10Z,CMG-03,CMG,SERVICE_DEGRADED,Service Degraded Alert,MAJOR,Service,Service performance degraded on CMG-03 due to upstream transport failure,ACTIVE
+ALM-STORM1-013,2026-10-08T10:02:13Z,CMG-03,CMG,SERVICE_DEGRADED,Service Degraded Alert,MINOR,Service,Service performance degraded on CMG-03 due to upstream transport failure,ACTIVE
+ALM-STORM1-024,2026-10-08T10:02:15Z,CMG-02,CMG,ATTACH_FAIL_HIGH,Attach Fail High Alert,MINOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-003,2026-10-08T10:02:16Z,CMG-02,CMG,ATTACH_FAIL_HIGH,Attach Fail High Alert,MINOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-009,2026-10-08T10:02:16Z,CMG-02,CMG,BEARER_DROP,Bearer Drop Alert,MAJOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-018,2026-10-08T10:02:26Z,CMG-02,CMG,ATTACH_FAIL_HIGH,Attach Fail High Alert,MAJOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-004,2026-10-08T10:02:31Z,CMG-02,CMG,ATTACH_FAIL_HIGH,Attach Fail High Alert,MINOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-028,2026-10-08T10:02:39Z,CMG-03,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,MINOR,Service,Service performance degraded on CMG-03 due to upstream transport failure,ACTIVE
+ALM-STORM1-034,2026-10-08T10:02:46Z,CMG-03,CMG,SERVICE_DEGRADED,Service Degraded Alert,WARNING,Service,Service performance degraded on CMG-03 due to upstream transport failure,ACTIVE
+ALM-STORM1-016,2026-10-08T10:02:53Z,CMG-02,CMG,ATTACH_FAIL_HIGH,Attach Fail High Alert,MAJOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-030,2026-10-08T10:02:54Z,CMG-03,CMG,ATTACH_FAIL_HIGH,Attach Fail High Alert,WARNING,Service,Service performance degraded on CMG-03 due to upstream transport failure,ACTIVE
+ALM-STORM1-029,2026-10-08T10:02:59Z,CMG-03,CMG,BEARER_DROP,Bearer Drop Alert,MAJOR,Service,Service performance degraded on CMG-03 due to upstream transport failure,ACTIVE
+ALM-STORM1-020,2026-10-08T10:03:04Z,CMG-03,CMG,SERVICE_DEGRADED,Service Degraded Alert,MINOR,Service,Service performance degraded on CMG-03 due to upstream transport failure,ACTIVE
+ALM-STORM1-017,2026-10-08T10:03:06Z,CMG-03,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,WARNING,Service,Service performance degraded on CMG-03 due to upstream transport failure,ACTIVE
+ALM-STORM1-036,2026-10-08T10:03:15Z,CMG-02,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,MAJOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-021,2026-10-08T10:03:24Z,CMG-03,CMG,ATTACH_FAIL_HIGH,Attach Fail High Alert,MINOR,Service,Service performance degraded on CMG-03 due to upstream transport failure,ACTIVE
+ALM-STORM1-027,2026-10-08T10:03:24Z,CMG-02,CMG,BEARER_DROP,Bearer Drop Alert,MINOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-031,2026-10-08T10:03:34Z,CMG-02,CMG,SERVICE_DEGRADED,Service Degraded Alert,WARNING,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-014,2026-10-08T10:03:36Z,CMG-02,CMG,SERVICE_DEGRADED,Service Degraded Alert,MAJOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-005,2026-10-08T10:03:39Z,CMG-03,CMG,SERVICE_DEGRADED,Service Degraded Alert,MINOR,Service,Service performance degraded on CMG-03 due to upstream transport failure,ACTIVE
+ALM-STORM1-026,2026-10-08T10:03:42Z,CMG-02,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,MINOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-032,2026-10-08T10:03:45Z,CMG-03,CMG,SERVICE_DEGRADED,Service Degraded Alert,MAJOR,Service,Service performance degraded on CMG-03 due to upstream transport failure,ACTIVE
+ALM-STORM1-015,2026-10-08T10:03:47Z,CMG-02,CMG,BEARER_DROP,Bearer Drop Alert,MAJOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-008,2026-10-08T10:04:06Z,CMG-02,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,MAJOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-012,2026-10-08T10:04:41Z,CMG-02,CMG,BEARER_DROP,Bearer Drop Alert,MAJOR,Service,Service performance degraded on CMG-02 due to upstream transport failure,ACTIVE
+ALM-STORM1-040,2026-10-08T10:04:44Z,CMG-03,CMG,ATTACH_FAIL_HIGH,Attach Fail High Alert,MINOR,Service,Service performance degraded on CMG-03 due to upstream transport failure,ACTIVE
+ALM-STORM1-022,2026-10-08T10:04:47Z,CMG-03,CMG,BEARER_DROP,Bearer Drop Alert,WARNING,Service,Service performance degraded on CMG-03 due to upstream transport failure,ACTIVE
+ALM-NOISE-0099,2026-10-08T10:12:40Z,LINK-A,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0027,2026-10-08T10:14:21Z,LINK-B,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0135,2026-10-08T10:14:57Z,LINK-B,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0082,2026-10-08T10:15:28Z,CMG-01,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0201,2026-10-08T10:22:22Z,CMG-01,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0062,2026-10-08T10:23:12Z,CMG-02,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0234,2026-10-08T10:34:56Z,LINK-A,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0034,2026-10-08T10:54:42Z,CMG-03,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0104,2026-10-08T11:02:20Z,UPF-01,UPF,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0226,2026-10-08T11:20:47Z,LINK-A,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0204,2026-10-08T11:21:25Z,CMG-03,CMG,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0230,2026-10-08T11:25:59Z,CMG-01,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0236,2026-10-08T11:28:26Z,LINK-A,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0124,2026-10-08T11:34:03Z,CMG-02,CMG,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0151,2026-10-08T11:40:34Z,LINK-B,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0216,2026-10-08T11:44:37Z,CMG-01,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0080,2026-10-08T11:46:56Z,LINK-A,Transport,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on LINK-A,ACTIVE
+ALM-STORM2-001,2026-10-08T12:00:00Z,CMG-01,CMG,CPU_HIGH,CPU Utilization Exceeds Threshold,CRITICAL,Hardware,CPM slot 1 CPU utilization exceeded 98% threshold for >30s,ACTIVE
+ALM-STORM2-079,2026-10-08T12:00:05Z,UPF-01,UPF,GTP_PATH_FAIL,Gtp Path Fail Alert,MAJOR,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-019,2026-10-08T12:00:06Z,UPF-01,UPF,SESSION_DROP,Session Drop Alert,MINOR,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-073,2026-10-08T12:00:09Z,UPF-01,UPF,PFCP_TIMEOUT,Pfcp Timeout Alert,MAJOR,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-057,2026-10-08T12:00:14Z,UPF-01,UPF,PFCP_TIMEOUT,Pfcp Timeout Alert,CRITICAL,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-012,2026-10-08T12:00:21Z,CMG-01,CMG,MEMORY_HIGH,Memory High Alert,MAJOR,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-011,2026-10-08T12:00:36Z,UPF-01,UPF,PFCP_TIMEOUT,Pfcp Timeout Alert,MINOR,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-067,2026-10-08T12:00:46Z,UPF-01,UPF,MEMORY_HIGH,Memory High Alert,MINOR,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-007,2026-10-08T12:00:47Z,UPF-01,UPF,SESSION_DROP,Session Drop Alert,MINOR,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-015,2026-10-08T12:00:47Z,UPF-01,UPF,PFCP_TIMEOUT,Pfcp Timeout Alert,CRITICAL,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-037,2026-10-08T12:00:54Z,UPF-01,UPF,SESSION_DROP,Session Drop Alert,MAJOR,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-006,2026-10-08T12:00:58Z,CMG-01,CMG,MEMORY_HIGH,Memory High Alert,MAJOR,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-047,2026-10-08T12:01:00Z,UPF-01,UPF,GTP_PATH_FAIL,Gtp Path Fail Alert,CRITICAL,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-036,2026-10-08T12:01:01Z,CMG-01,CMG,PFCP_TIMEOUT,Pfcp Timeout Alert,MINOR,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-070,2026-10-08T12:01:02Z,CMG-01,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,CRITICAL,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-031,2026-10-08T12:01:04Z,UPF-01,UPF,SESSION_DROP,Session Drop Alert,CRITICAL,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-034,2026-10-08T12:01:04Z,CMG-01,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,MINOR,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-010,2026-10-08T12:01:08Z,CMG-01,CMG,MEMORY_HIGH,Memory High Alert,MAJOR,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-046,2026-10-08T12:01:09Z,CMG-01,CMG,SESSION_DROP,Session Drop Alert,CRITICAL,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-039,2026-10-08T12:01:17Z,UPF-01,UPF,GTP_PATH_FAIL,Gtp Path Fail Alert,MAJOR,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-078,2026-10-08T12:01:20Z,CMG-01,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,MAJOR,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-003,2026-10-08T12:01:21Z,UPF-01,UPF,SESSION_DROP,Session Drop Alert,MAJOR,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-069,2026-10-08T12:01:25Z,UPF-01,UPF,SESSION_DROP,Session Drop Alert,MAJOR,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-004,2026-10-08T12:01:33Z,CMG-01,CMG,SESSION_DROP,Session Drop Alert,MAJOR,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-062,2026-10-08T12:01:33Z,CMG-01,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,CRITICAL,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-051,2026-10-08T12:01:34Z,UPF-01,UPF,SESSION_DROP,Session Drop Alert,MAJOR,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-044,2026-10-08T12:01:35Z,CMG-01,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,MINOR,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-002,2026-10-08T12:01:38Z,CMG-01,CMG,SESSION_DROP,Session Drop Alert,CRITICAL,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-043,2026-10-08T12:01:38Z,UPF-01,UPF,PFCP_TIMEOUT,Pfcp Timeout Alert,MINOR,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-040,2026-10-08T12:01:39Z,CMG-01,CMG,MEMORY_HIGH,Memory High Alert,MAJOR,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-017,2026-10-08T12:01:44Z,UPF-01,UPF,GTP_PATH_FAIL,Gtp Path Fail Alert,MINOR,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-013,2026-10-08T12:01:48Z,UPF-01,UPF,SESSION_DROP,Session Drop Alert,CRITICAL,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-060,2026-10-08T12:01:49Z,CMG-01,CMG,SESSION_DROP,Session Drop Alert,MAJOR,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-065,2026-10-08T12:01:51Z,UPF-01,UPF,GTP_PATH_FAIL,Gtp Path Fail Alert,CRITICAL,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-063,2026-10-08T12:01:53Z,UPF-01,UPF,MEMORY_HIGH,Memory High Alert,MAJOR,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-076,2026-10-08T12:01:58Z,CMG-01,CMG,MEMORY_HIGH,Memory High Alert,CRITICAL,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-055,2026-10-08T12:01:59Z,UPF-01,UPF,GTP_PATH_FAIL,Gtp Path Fail Alert,MAJOR,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-032,2026-10-08T12:02:01Z,CMG-01,CMG,MEMORY_HIGH,Memory High Alert,MINOR,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-074,2026-10-08T12:02:01Z,CMG-01,CMG,PFCP_TIMEOUT,Pfcp Timeout Alert,MAJOR,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-014,2026-10-08T12:02:03Z,CMG-01,CMG,PFCP_TIMEOUT,Pfcp Timeout Alert,MAJOR,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-023,2026-10-08T12:02:16Z,UPF-01,UPF,GTP_PATH_FAIL,Gtp Path Fail Alert,MINOR,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-058,2026-10-08T12:02:17Z,CMG-01,CMG,SESSION_DROP,Session Drop Alert,CRITICAL,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-056,2026-10-08T12:02:18Z,CMG-01,CMG,PFCP_TIMEOUT,Pfcp Timeout Alert,CRITICAL,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-020,2026-10-08T12:02:22Z,CMG-01,CMG,MEMORY_HIGH,Memory High Alert,MAJOR,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-042,2026-10-08T12:02:32Z,CMG-01,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,CRITICAL,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-061,2026-10-08T12:02:32Z,UPF-01,UPF,GTP_PATH_FAIL,Gtp Path Fail Alert,MINOR,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-008,2026-10-08T12:02:41Z,CMG-01,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,MINOR,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-066,2026-10-08T12:02:41Z,CMG-01,CMG,PFCP_TIMEOUT,Pfcp Timeout Alert,MAJOR,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-038,2026-10-08T12:02:56Z,CMG-01,CMG,MEMORY_HIGH,Memory High Alert,MAJOR,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-026,2026-10-08T12:03:07Z,CMG-01,CMG,MEMORY_HIGH,Memory High Alert,MAJOR,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-009,2026-10-08T12:03:08Z,UPF-01,UPF,SESSION_DROP,Session Drop Alert,CRITICAL,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-071,2026-10-08T12:03:08Z,UPF-01,UPF,MEMORY_HIGH,Memory High Alert,CRITICAL,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-024,2026-10-08T12:03:11Z,CMG-01,CMG,MEMORY_HIGH,Memory High Alert,CRITICAL,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-072,2026-10-08T12:03:14Z,CMG-01,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,MINOR,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-048,2026-10-08T12:03:21Z,CMG-01,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,MAJOR,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-035,2026-10-08T12:03:23Z,UPF-01,UPF,MEMORY_HIGH,Memory High Alert,CRITICAL,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-041,2026-10-08T12:03:24Z,UPF-01,UPF,MEMORY_HIGH,Memory High Alert,MINOR,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-025,2026-10-08T12:03:30Z,UPF-01,UPF,PFCP_TIMEOUT,Pfcp Timeout Alert,CRITICAL,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-029,2026-10-08T12:03:42Z,UPF-01,UPF,PFCP_TIMEOUT,Pfcp Timeout Alert,MAJOR,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-005,2026-10-08T12:03:49Z,UPF-01,UPF,MEMORY_HIGH,Memory High Alert,CRITICAL,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-028,2026-10-08T12:03:49Z,CMG-01,CMG,PFCP_TIMEOUT,Pfcp Timeout Alert,CRITICAL,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-053,2026-10-08T12:03:50Z,UPF-01,UPF,PFCP_TIMEOUT,Pfcp Timeout Alert,MAJOR,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-064,2026-10-08T12:03:50Z,CMG-01,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,CRITICAL,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-033,2026-10-08T12:03:56Z,UPF-01,UPF,PFCP_TIMEOUT,Pfcp Timeout Alert,CRITICAL,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-052,2026-10-08T12:04:04Z,CMG-01,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,MINOR,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-027,2026-10-08T12:04:08Z,UPF-01,UPF,GTP_PATH_FAIL,Gtp Path Fail Alert,MAJOR,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-077,2026-10-08T12:04:12Z,UPF-01,UPF,PFCP_TIMEOUT,Pfcp Timeout Alert,MAJOR,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-049,2026-10-08T12:04:13Z,UPF-01,UPF,MEMORY_HIGH,Memory High Alert,MAJOR,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-018,2026-10-08T12:04:22Z,CMG-01,CMG,MEMORY_HIGH,Memory High Alert,CRITICAL,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-075,2026-10-08T12:04:32Z,UPF-01,UPF,SESSION_DROP,Session Drop Alert,CRITICAL,Service,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-030,2026-10-08T12:04:35Z,CMG-01,CMG,MEMORY_HIGH,Memory High Alert,CRITICAL,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-016,2026-10-08T12:04:36Z,CMG-01,CMG,PFCP_TIMEOUT,Pfcp Timeout Alert,CRITICAL,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-054,2026-10-08T12:04:37Z,CMG-01,CMG,GTP_PATH_FAIL,Gtp Path Fail Alert,CRITICAL,Service,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-021,2026-10-08T12:04:38Z,UPF-01,UPF,PFCP_TIMEOUT,Pfcp Timeout Alert,MINOR,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-059,2026-10-08T12:04:39Z,UPF-01,UPF,MEMORY_HIGH,Memory High Alert,MINOR,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-068,2026-10-08T12:04:42Z,CMG-01,CMG,PFCP_TIMEOUT,Pfcp Timeout Alert,MINOR,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-080,2026-10-08T12:04:42Z,CMG-01,CMG,PFCP_TIMEOUT,Pfcp Timeout Alert,MINOR,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-045,2026-10-08T12:04:46Z,UPF-01,UPF,MEMORY_HIGH,Memory High Alert,MINOR,Hardware,Resource exhaustion secondary impact on UPF-01,ACTIVE
+ALM-STORM2-050,2026-10-08T12:04:50Z,CMG-01,CMG,MEMORY_HIGH,Memory High Alert,MINOR,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-STORM2-022,2026-10-08T12:04:53Z,CMG-01,CMG,MEMORY_HIGH,Memory High Alert,MAJOR,Hardware,Resource exhaustion secondary impact on CMG-01,ACTIVE
+ALM-NOISE-0049,2026-10-08T12:18:39Z,LINK-B,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0213,2026-10-08T12:22:01Z,CMG-02,CMG,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0185,2026-10-08T12:34:12Z,CMG-02,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0200,2026-10-08T12:34:58Z,UPF-01,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0090,2026-10-08T12:36:08Z,CMG-03,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0067,2026-10-08T12:41:35Z,UPF-01,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0030,2026-10-08T12:41:58Z,UPF-02,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0237,2026-10-08T12:51:01Z,CMG-03,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0029,2026-10-08T12:51:37Z,CMG-02,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0198,2026-10-08T12:53:44Z,LINK-A,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0028,2026-10-08T12:58:45Z,UPF-02,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0033,2026-10-08T13:25:32Z,CMG-03,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0159,2026-10-08T13:28:08Z,CMG-03,CMG,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0150,2026-10-08T13:35:41Z,CMG-02,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0079,2026-10-08T13:42:26Z,LINK-A,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0071,2026-10-08T13:49:33Z,UPF-01,UPF,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-STORM3-001,2026-10-08T14:00:00Z,CMG-03,CMG,PFCP_HEARTBEAT_FAIL,PFCP Association Heartbeat Timeout,CRITICAL,Protocol,N4/Sxa/Sxb PFCP heartbeat response timeout with UPF-02 (10.95.46.177),ACTIVE
+ALM-STORM3-039,2026-10-08T14:00:13Z,CMG-03,CMG,USER_PLANE_ISOLATED,User Plane Isolated Alert,MAJOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-032,2026-10-08T14:00:14Z,UPF-02,UPF,S5_GTP_FAIL,S5 Gtp Fail Alert,MINOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-034,2026-10-08T14:00:18Z,UPF-02,UPF,USER_PLANE_ISOLATED,User Plane Isolated Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-070,2026-10-08T14:00:19Z,UPF-02,UPF,S5_GTP_FAIL,S5 Gtp Fail Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-053,2026-10-08T14:00:26Z,CMG-03,CMG,USER_PLANE_ISOLATED,User Plane Isolated Alert,MAJOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-022,2026-10-08T14:00:27Z,UPF-02,UPF,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MINOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-024,2026-10-08T14:00:31Z,UPF-02,UPF,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-041,2026-10-08T14:00:34Z,CMG-03,CMG,USER_PLANE_ISOLATED,User Plane Isolated Alert,MAJOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-061,2026-10-08T14:00:34Z,CMG-03,CMG,S5_GTP_FAIL,S5 Gtp Fail Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-029,2026-10-08T14:00:43Z,CMG-03,CMG,USER_PLANE_ISOLATED,User Plane Isolated Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-016,2026-10-08T14:00:44Z,UPF-02,UPF,USER_PLANE_ISOLATED,User Plane Isolated Alert,MINOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-013,2026-10-08T14:00:47Z,CMG-03,CMG,S5_GTP_FAIL,S5 Gtp Fail Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-043,2026-10-08T14:00:54Z,CMG-03,CMG,S5_GTP_FAIL,S5 Gtp Fail Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-069,2026-10-08T14:00:55Z,CMG-03,CMG,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-006,2026-10-08T14:01:01Z,UPF-02,UPF,S5_GTP_FAIL,S5 Gtp Fail Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-036,2026-10-08T14:01:18Z,UPF-02,UPF,USER_PLANE_ISOLATED,User Plane Isolated Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-059,2026-10-08T14:01:22Z,CMG-03,CMG,USER_PLANE_ISOLATED,User Plane Isolated Alert,MAJOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-003,2026-10-08T14:01:32Z,CMG-03,CMG,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MAJOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-063,2026-10-08T14:01:37Z,CMG-03,CMG,S5_GTP_FAIL,S5 Gtp Fail Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-046,2026-10-08T14:01:50Z,UPF-02,UPF,S5_GTP_FAIL,S5 Gtp Fail Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-014,2026-10-08T14:01:55Z,UPF-02,UPF,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-066,2026-10-08T14:01:55Z,UPF-02,UPF,S5_GTP_FAIL,S5 Gtp Fail Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-047,2026-10-08T14:01:56Z,CMG-03,CMG,USER_PLANE_ISOLATED,User Plane Isolated Alert,MAJOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-020,2026-10-08T14:01:58Z,UPF-02,UPF,S5_GTP_FAIL,S5 Gtp Fail Alert,MINOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-025,2026-10-08T14:02:01Z,CMG-03,CMG,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-051,2026-10-08T14:02:09Z,CMG-03,CMG,USER_PLANE_ISOLATED,User Plane Isolated Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-048,2026-10-08T14:02:14Z,UPF-02,UPF,S5_GTP_FAIL,S5 Gtp Fail Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-018,2026-10-08T14:02:16Z,UPF-02,UPF,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MINOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-068,2026-10-08T14:02:16Z,UPF-02,UPF,USER_PLANE_ISOLATED,User Plane Isolated Alert,MINOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-030,2026-10-08T14:02:21Z,UPF-02,UPF,S5_GTP_FAIL,S5 Gtp Fail Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-028,2026-10-08T14:02:22Z,UPF-02,UPF,USER_PLANE_ISOLATED,User Plane Isolated Alert,MINOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-064,2026-10-08T14:02:24Z,UPF-02,UPF,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-017,2026-10-08T14:02:25Z,CMG-03,CMG,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MAJOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-015,2026-10-08T14:02:29Z,CMG-03,CMG,USER_PLANE_ISOLATED,User Plane Isolated Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-007,2026-10-08T14:02:33Z,CMG-03,CMG,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-038,2026-10-08T14:02:41Z,UPF-02,UPF,USER_PLANE_ISOLATED,User Plane Isolated Alert,MINOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-037,2026-10-08T14:02:52Z,CMG-03,CMG,S5_GTP_FAIL,S5 Gtp Fail Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-027,2026-10-08T14:02:54Z,CMG-03,CMG,S5_GTP_FAIL,S5 Gtp Fail Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-005,2026-10-08T14:03:03Z,CMG-03,CMG,USER_PLANE_ISOLATED,User Plane Isolated Alert,MAJOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-033,2026-10-08T14:03:04Z,CMG-03,CMG,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MAJOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-004,2026-10-08T14:03:07Z,UPF-02,UPF,S5_GTP_FAIL,S5 Gtp Fail Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-058,2026-10-08T14:03:16Z,UPF-02,UPF,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-049,2026-10-08T14:03:17Z,CMG-03,CMG,S5_GTP_FAIL,S5 Gtp Fail Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-019,2026-10-08T14:03:21Z,CMG-03,CMG,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MAJOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-035,2026-10-08T14:03:21Z,CMG-03,CMG,S5_GTP_FAIL,S5 Gtp Fail Alert,MAJOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-067,2026-10-08T14:03:23Z,CMG-03,CMG,S5_GTP_FAIL,S5 Gtp Fail Alert,MAJOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-052,2026-10-08T14:03:25Z,UPF-02,UPF,USER_PLANE_ISOLATED,User Plane Isolated Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-008,2026-10-08T14:03:26Z,UPF-02,UPF,S5_GTP_FAIL,S5 Gtp Fail Alert,MINOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-023,2026-10-08T14:03:32Z,CMG-03,CMG,USER_PLANE_ISOLATED,User Plane Isolated Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-062,2026-10-08T14:03:53Z,UPF-02,UPF,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-009,2026-10-08T14:03:55Z,CMG-03,CMG,USER_PLANE_ISOLATED,User Plane Isolated Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-056,2026-10-08T14:03:55Z,UPF-02,UPF,USER_PLANE_ISOLATED,User Plane Isolated Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-040,2026-10-08T14:03:58Z,UPF-02,UPF,S5_GTP_FAIL,S5 Gtp Fail Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-050,2026-10-08T14:03:58Z,UPF-02,UPF,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-054,2026-10-08T14:03:58Z,UPF-02,UPF,USER_PLANE_ISOLATED,User Plane Isolated Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-045,2026-10-08T14:04:00Z,CMG-03,CMG,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MAJOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-031,2026-10-08T14:04:01Z,CMG-03,CMG,S5_GTP_FAIL,S5 Gtp Fail Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-012,2026-10-08T14:04:02Z,UPF-02,UPF,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-002,2026-10-08T14:04:06Z,UPF-02,UPF,USER_PLANE_ISOLATED,User Plane Isolated Alert,MINOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-011,2026-10-08T14:04:06Z,CMG-03,CMG,S5_GTP_FAIL,S5 Gtp Fail Alert,MAJOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-010,2026-10-08T14:04:07Z,UPF-02,UPF,S5_GTP_FAIL,S5 Gtp Fail Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-021,2026-10-08T14:04:12Z,CMG-03,CMG,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-055,2026-10-08T14:04:20Z,CMG-03,CMG,S5_GTP_FAIL,S5 Gtp Fail Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-042,2026-10-08T14:04:26Z,UPF-02,UPF,USER_PLANE_ISOLATED,User Plane Isolated Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-057,2026-10-08T14:04:29Z,CMG-03,CMG,S5_GTP_FAIL,S5 Gtp Fail Alert,MINOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-060,2026-10-08T14:04:33Z,UPF-02,UPF,USER_PLANE_ISOLATED,User Plane Isolated Alert,MINOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-044,2026-10-08T14:04:36Z,UPF-02,UPF,USER_PLANE_ISOLATED,User Plane Isolated Alert,MAJOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-STORM3-065,2026-10-08T14:04:44Z,CMG-03,CMG,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MAJOR,Service,PFCP control plane loss impact on CMG-03,ACTIVE
+ALM-STORM3-026,2026-10-08T14:04:45Z,UPF-02,UPF,BEARER_CREATE_FAIL,Bearer Create Fail Alert,MINOR,Service,PFCP control plane loss impact on UPF-02,ACTIVE
+ALM-NOISE-0021,2026-10-08T14:18:57Z,UPF-01,UPF,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0017,2026-10-08T14:20:10Z,CMG-03,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0024,2026-10-08T14:22:36Z,CMG-03,CMG,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0184,2026-10-08T14:25:16Z,UPF-01,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0193,2026-10-08T14:31:14Z,LINK-B,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0215,2026-10-08T14:32:57Z,CMG-03,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0149,2026-10-08T14:46:39Z,UPF-02,UPF,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0118,2026-10-08T14:51:09Z,UPF-02,UPF,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0208,2026-10-08T14:51:25Z,CMG-03,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0249,2026-10-08T14:58:32Z,CMG-02,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0227,2026-10-08T15:23:54Z,UPF-02,UPF,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0235,2026-10-08T15:37:10Z,LINK-A,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0231,2026-10-08T15:46:38Z,LINK-A,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-A,ACTIVE
+ALM-STORM4-001,2026-10-08T16:00:00Z,LINK-B,Transport,LINK_DOWN,Agra Edge Fiber Ring Break,CRITICAL,Transport,Optical fiber cut detected on DWDM Span Agra-East Port 1/1/2,ACTIVE
+ALM-STORM4-017,2026-10-08T16:00:07Z,UPF-02,UPF,THROUGHPUT_DROP,Throughput Drop Alert,MINOR,Service,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-034,2026-10-08T16:00:21Z,UPF-02,UPF,THROUGHPUT_DROP,Throughput Drop Alert,MINOR,Service,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-002,2026-10-08T16:00:24Z,UPF-02,UPF,INTERFACE_ERRORS,Interface Errors Alert,MINOR,Service,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-060,2026-10-08T16:00:38Z,UPF-01,UPF,INTERFACE_ERRORS,Interface Errors Alert,MINOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-009,2026-10-08T16:00:44Z,UPF-01,UPF,INTERFACE_ERRORS,Interface Errors Alert,CRITICAL,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-036,2026-10-08T16:00:47Z,UPF-01,UPF,THROUGHPUT_DROP,Throughput Drop Alert,MAJOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-010,2026-10-08T16:01:00Z,UPF-02,UPF,THROUGHPUT_DROP,Throughput Drop Alert,MINOR,Service,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-037,2026-10-08T16:01:00Z,UPF-01,UPF,INTERFACE_ERRORS,Interface Errors Alert,MINOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-041,2026-10-08T16:01:01Z,UPF-01,UPF,THROUGHPUT_DROP,Throughput Drop Alert,MAJOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-014,2026-10-08T16:01:08Z,UPF-02,UPF,INTERFACE_ERRORS,Interface Errors Alert,MINOR,Service,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-027,2026-10-08T16:01:10Z,UPF-01,UPF,INTERFACE_ERRORS,Interface Errors Alert,MAJOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-021,2026-10-08T16:01:12Z,UPF-02,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,MINOR,Transport,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-022,2026-10-08T16:01:12Z,UPF-02,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,CRITICAL,Transport,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-057,2026-10-08T16:01:17Z,UPF-01,UPF,THROUGHPUT_DROP,Throughput Drop Alert,MAJOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-049,2026-10-08T16:01:21Z,UPF-01,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,CRITICAL,Transport,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-025,2026-10-08T16:01:27Z,UPF-01,UPF,INTERFACE_ERRORS,Interface Errors Alert,MAJOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-038,2026-10-08T16:01:27Z,UPF-01,UPF,THROUGHPUT_DROP,Throughput Drop Alert,CRITICAL,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-039,2026-10-08T16:01:40Z,UPF-02,UPF,THROUGHPUT_DROP,Throughput Drop Alert,CRITICAL,Service,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-019,2026-10-08T16:01:51Z,UPF-02,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,MAJOR,Transport,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-003,2026-10-08T16:01:54Z,UPF-01,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,MINOR,Transport,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-051,2026-10-08T16:01:56Z,UPF-02,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,MAJOR,Transport,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-046,2026-10-08T16:02:12Z,UPF-01,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,CRITICAL,Transport,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-013,2026-10-08T16:02:13Z,UPF-02,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,MINOR,Transport,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-011,2026-10-08T16:02:22Z,UPF-01,UPF,THROUGHPUT_DROP,Throughput Drop Alert,CRITICAL,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-007,2026-10-08T16:02:29Z,UPF-02,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,CRITICAL,Transport,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-018,2026-10-08T16:02:35Z,UPF-01,UPF,INTERFACE_ERRORS,Interface Errors Alert,MINOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-031,2026-10-08T16:02:45Z,UPF-01,UPF,THROUGHPUT_DROP,Throughput Drop Alert,MINOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-040,2026-10-08T16:02:48Z,UPF-02,UPF,THROUGHPUT_DROP,Throughput Drop Alert,CRITICAL,Service,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-048,2026-10-08T16:02:53Z,UPF-02,UPF,THROUGHPUT_DROP,Throughput Drop Alert,MAJOR,Service,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-024,2026-10-08T16:02:55Z,UPF-01,UPF,INTERFACE_ERRORS,Interface Errors Alert,MAJOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-035,2026-10-08T16:02:58Z,UPF-02,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,CRITICAL,Transport,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-056,2026-10-08T16:02:58Z,UPF-01,UPF,THROUGHPUT_DROP,Throughput Drop Alert,MAJOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-033,2026-10-08T16:03:09Z,UPF-01,UPF,THROUGHPUT_DROP,Throughput Drop Alert,MINOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-042,2026-10-08T16:03:10Z,UPF-02,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,MAJOR,Transport,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-053,2026-10-08T16:03:13Z,UPF-01,UPF,THROUGHPUT_DROP,Throughput Drop Alert,CRITICAL,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-032,2026-10-08T16:03:14Z,UPF-02,UPF,INTERFACE_ERRORS,Interface Errors Alert,CRITICAL,Service,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-005,2026-10-08T16:03:20Z,UPF-02,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,CRITICAL,Transport,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-015,2026-10-08T16:03:26Z,UPF-02,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,MINOR,Transport,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-030,2026-10-08T16:03:26Z,UPF-02,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,CRITICAL,Transport,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-016,2026-10-08T16:03:27Z,UPF-01,UPF,THROUGHPUT_DROP,Throughput Drop Alert,MAJOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-026,2026-10-08T16:03:30Z,UPF-01,UPF,INTERFACE_ERRORS,Interface Errors Alert,MAJOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-058,2026-10-08T16:03:38Z,UPF-01,UPF,THROUGHPUT_DROP,Throughput Drop Alert,MAJOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-047,2026-10-08T16:03:51Z,UPF-02,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,CRITICAL,Transport,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-050,2026-10-08T16:03:52Z,UPF-02,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,MAJOR,Transport,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-029,2026-10-08T16:04:07Z,UPF-01,UPF,THROUGHPUT_DROP,Throughput Drop Alert,MAJOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-043,2026-10-08T16:04:07Z,UPF-02,UPF,INTERFACE_ERRORS,Interface Errors Alert,MAJOR,Service,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-052,2026-10-08T16:04:12Z,UPF-02,UPF,THROUGHPUT_DROP,Throughput Drop Alert,MINOR,Service,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-054,2026-10-08T16:04:13Z,UPF-02,UPF,THROUGHPUT_DROP,Throughput Drop Alert,CRITICAL,Service,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-012,2026-10-08T16:04:14Z,UPF-01,UPF,INTERFACE_ERRORS,Interface Errors Alert,CRITICAL,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-044,2026-10-08T16:04:17Z,UPF-01,UPF,INTERFACE_ERRORS,Interface Errors Alert,MINOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-004,2026-10-08T16:04:18Z,UPF-01,UPF,INTERFACE_ERRORS,Interface Errors Alert,MINOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-020,2026-10-08T16:04:22Z,UPF-02,UPF,INTERFACE_ERRORS,Interface Errors Alert,MINOR,Service,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-028,2026-10-08T16:04:22Z,UPF-02,UPF,INTERFACE_ERRORS,Interface Errors Alert,MINOR,Service,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-045,2026-10-08T16:04:23Z,UPF-02,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,MINOR,Transport,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-STORM4-023,2026-10-08T16:04:30Z,UPF-01,UPF,THROUGHPUT_DROP,Throughput Drop Alert,MAJOR,Service,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-055,2026-10-08T16:04:31Z,UPF-01,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,CRITICAL,Transport,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-059,2026-10-08T16:04:41Z,UPF-01,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,MAJOR,Transport,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-006,2026-10-08T16:04:43Z,UPF-01,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,MINOR,Transport,Transport degradation secondary impact on UPF-01,ACTIVE
+ALM-STORM4-008,2026-10-08T16:04:51Z,UPF-02,UPF,PACKET_LOSS_HIGH,Packet Loss High Alert,MINOR,Transport,Transport degradation secondary impact on UPF-02,ACTIVE
+ALM-NOISE-0169,2026-10-08T16:15:52Z,UPF-01,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0221,2026-10-08T16:20:43Z,LINK-B,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0202,2026-10-08T16:22:57Z,UPF-02,UPF,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0053,2026-10-08T16:28:32Z,LINK-A,Transport,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0195,2026-10-08T16:29:52Z,CMG-03,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0056,2026-10-08T16:34:30Z,CMG-03,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0196,2026-10-08T16:45:45Z,CMG-02,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0179,2026-10-08T16:48:18Z,UPF-01,UPF,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0140,2026-10-08T16:50:11Z,CMG-01,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0122,2026-10-08T17:03:32Z,LINK-B,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0183,2026-10-08T17:04:00Z,UPF-01,UPF,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0011,2026-10-08T17:04:01Z,UPF-01,UPF,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0144,2026-10-08T17:11:53Z,CMG-02,CMG,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0031,2026-10-08T17:18:53Z,LINK-A,Transport,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0211,2026-10-08T17:22:13Z,UPF-01,UPF,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0035,2026-10-08T17:22:56Z,UPF-02,UPF,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0130,2026-10-08T17:46:14Z,LINK-A,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0136,2026-10-08T17:48:01Z,CMG-01,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0217,2026-10-08T17:57:32Z,UPF-02,UPF,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0177,2026-10-08T18:05:10Z,LINK-B,Transport,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0182,2026-10-08T18:09:15Z,CMG-01,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0014,2026-10-08T18:11:25Z,CMG-02,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0089,2026-10-08T18:14:43Z,LINK-A,Transport,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0013,2026-10-08T18:21:24Z,CMG-02,CMG,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0137,2026-10-08T18:30:47Z,LINK-B,Transport,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0098,2026-10-08T18:33:38Z,UPF-01,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0125,2026-10-08T18:35:32Z,CMG-02,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0076,2026-10-08T18:42:10Z,LINK-B,Transport,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0126,2026-10-08T18:45:50Z,LINK-A,Transport,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0003,2026-10-08T18:48:01Z,UPF-02,UPF,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0154,2026-10-08T18:56:20Z,UPF-02,UPF,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0146,2026-10-08T19:03:29Z,LINK-A,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0240,2026-10-08T19:04:24Z,CMG-01,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0022,2026-10-08T19:10:49Z,LINK-B,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0061,2026-10-08T19:16:31Z,CMG-01,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0004,2026-10-08T19:18:46Z,UPF-02,UPF,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0002,2026-10-08T19:19:45Z,CMG-01,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0250,2026-10-08T19:28:17Z,UPF-01,UPF,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0233,2026-10-08T19:29:26Z,CMG-03,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0180,2026-10-08T19:29:50Z,CMG-02,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0232,2026-10-08T19:33:01Z,UPF-01,UPF,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0173,2026-10-08T19:38:10Z,UPF-02,UPF,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0120,2026-10-08T19:40:06Z,CMG-03,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0155,2026-10-08T19:41:09Z,CMG-03,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0210,2026-10-08T20:11:08Z,CMG-03,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0158,2026-10-08T20:12:03Z,LINK-B,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0097,2026-10-08T20:19:15Z,CMG-03,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0020,2026-10-08T20:22:09Z,LINK-A,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0095,2026-10-08T20:22:32Z,LINK-A,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0018,2026-10-08T20:32:42Z,UPF-02,UPF,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0152,2026-10-08T20:33:03Z,UPF-02,UPF,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0036,2026-10-08T20:35:49Z,LINK-B,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0110,2026-10-08T20:52:44Z,CMG-02,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0145,2026-10-08T20:55:36Z,UPF-01,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0172,2026-10-08T21:04:42Z,LINK-A,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0143,2026-10-08T21:06:37Z,CMG-03,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0008,2026-10-08T21:07:31Z,UPF-02,UPF,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0101,2026-10-08T21:11:14Z,UPF-02,UPF,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0070,2026-10-08T21:14:42Z,CMG-03,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0073,2026-10-08T21:18:09Z,LINK-A,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0081,2026-10-08T21:18:40Z,LINK-A,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0037,2026-10-08T21:20:07Z,CMG-03,CMG,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0019,2026-10-08T21:22:30Z,CMG-03,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0161,2026-10-08T21:28:45Z,CMG-01,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0214,2026-10-08T21:30:21Z,CMG-03,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-03,ACTIVE
+ALM-NOISE-0197,2026-10-08T21:45:00Z,LINK-A,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0068,2026-10-08T21:47:23Z,CMG-02,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0225,2026-10-08T21:48:42Z,UPF-02,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0187,2026-10-08T21:54:19Z,LINK-A,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0178,2026-10-08T21:54:28Z,LINK-B,Transport,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0025,2026-10-08T22:01:17Z,UPF-02,UPF,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0203,2026-10-08T22:31:06Z,CMG-02,CMG,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0064,2026-10-08T22:31:58Z,LINK-B,Transport,NTP_SYNC_WARN,Ntp Sync Warn,WARNING,System,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0167,2026-10-08T22:32:33Z,CMG-02,CMG,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0239,2026-10-08T22:44:51Z,UPF-01,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0117,2026-10-08T23:02:56Z,UPF-02,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0040,2026-10-08T23:04:12Z,LINK-B,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-B,ACTIVE
+ALM-NOISE-0044,2026-10-08T23:06:27Z,CMG-02,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0148,2026-10-08T23:13:00Z,UPF-01,UPF,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0133,2026-10-08T23:13:29Z,UPF-01,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0160,2026-10-08T23:15:44Z,UPF-02,UPF,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0001,2026-10-08T23:16:44Z,UPF-01,UPF,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on UPF-01,ACTIVE
+ALM-NOISE-0245,2026-10-08T23:18:40Z,UPF-02,UPF,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on UPF-02,ACTIVE
+ALM-NOISE-0171,2026-10-08T23:20:01Z,CMG-01,CMG,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0026,2026-10-08T23:35:04Z,CMG-02,CMG,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on CMG-02,ACTIVE
+ALM-NOISE-0205,2026-10-08T23:35:10Z,CMG-01,CMG,LOG_DISK_80,Log Disk 80,MINOR,System,Routine system notification on CMG-01,ACTIVE
+ALM-NOISE-0188,2026-10-08T23:35:46Z,LINK-A,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0094,2026-10-08T23:39:25Z,LINK-A,Transport,TEMP_MINOR,Temp Minor,MINOR,Hardware,Routine system notification on LINK-A,ACTIVE
+ALM-NOISE-0170,2026-10-08T23:50:42Z,LINK-B,Transport,FAN_WARNING,Fan Warning,WARNING,Hardware,Routine system notification on LINK-B,ACTIVE

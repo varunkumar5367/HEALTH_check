@@ -1,0 +1,88 @@
+{
+  "nodes": [
+    {
+      "id": "LINK-A",
+      "name": "Transport Link A",
+      "node_type": "Transport",
+      "site": "Agra Core"
+    },
+    {
+      "id": "LINK-B",
+      "name": "Transport Link B",
+      "node_type": "Transport",
+      "site": "Agra Edge"
+    },
+    {
+      "id": "CMG-01",
+      "name": "Control Plane Gateway 01",
+      "node_type": "CMG",
+      "site": "Agra Core"
+    },
+    {
+      "id": "CMG-02",
+      "name": "Control Plane Gateway 02",
+      "node_type": "CMG",
+      "site": "Agra Core"
+    },
+    {
+      "id": "CMG-03",
+      "name": "Control Plane Gateway 03",
+      "node_type": "CMG",
+      "site": "Agra Core"
+    },
+    {
+      "id": "UPF-01",
+      "name": "User Plane Function 01",
+      "node_type": "UPF",
+      "site": "Agra South"
+    },
+    {
+      "id": "UPF-02",
+      "name": "User Plane Function 02",
+      "node_type": "UPF",
+      "site": "Agra South"
+    }
+  ],
+  "edges": [
+    {
+      "source": "LINK-A",
+      "target": "CMG-02",
+      "link_type": "Transport"
+    },
+    {
+      "source": "LINK-A",
+      "target": "CMG-03",
+      "link_type": "Transport"
+    },
+    {
+      "source": "CMG-02",
+      "target": "CMG-03",
+      "link_type": "BGP_Peer"
+    },
+    {
+      "source": "CMG-01",
+      "target": "UPF-01",
+      "link_type": "PFCP_S5S8"
+    },
+    {
+      "source": "CMG-02",
+      "target": "UPF-01",
+      "link_type": "PFCP_S5S8"
+    },
+    {
+      "source": "CMG-03",
+      "target": "UPF-02",
+      "link_type": "PFCP_S5S8"
+    },
+    {
+      "source": "LINK-B",
+      "target": "UPF-01",
+      "link_type": "Transport"
+    },
+    {
+      "source": "LINK-B",
+      "target": "UPF-02",
+      "link_type": "Transport"
+    }
+  ]
+}
