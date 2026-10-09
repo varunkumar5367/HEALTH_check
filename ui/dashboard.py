@@ -74,15 +74,9 @@ scenario = st.sidebar.selectbox(
 st.sidebar.divider()
 st.sidebar.header("📧 Email Alert Settings")
 recipient_email = st.sidebar.text_input("Engineer Email Recipient", value=settings.ALERT_EMAIL_RECIPIENT)
-smtp_mode = st.sidebar.radio("Email Dispatch Mode", ["Live SMTP Relay", "Sandbox Outbox (Mock)"], index=0)
-
-if smtp_mode == "Live SMTP Relay":
-    mailer.use_mock = False
-    mailer.smtp_user = settings.SMTP_USER
-    mailer.smtp_password = settings.SMTP_PASSWORD
-    st.sidebar.success(f"✅ Live Gmail SMTP Active (`{settings.SMTP_USER}`)")
-else:
-    mailer.use_mock = True
+mailer.smtp_user = settings.SMTP_USER
+mailer.smtp_password = settings.SMTP_PASSWORD
+st.sidebar.success(f"✅ Live Gmail SMTP Active (`{settings.SMTP_USER}`)")
 
 # Filter alarms based on selection
 if "Storm 1" in scenario:
@@ -172,7 +166,7 @@ else:
             
             st.markdown(f"**Daemon Status:** `{'ACTIVE' if monitor_daemon.running else 'STOPPED'}` | **Interval:** `{monitor_daemon.interval_seconds}s`")
             st.markdown(f"**Target Recipient:** `{recipient_email}`")
-            st.markdown(f"**Active Dispatch Mode:** `{'Sandbox Outbox (Mock)' if mailer.use_mock else 'Live SMTP Relay'}`")
+            st.markdown(f"**Active Dispatch Mode:** `Live Gmail SMTP Relay (smtp.gmail.com)`")
 
         st.divider()
 

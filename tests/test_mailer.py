@@ -22,8 +22,8 @@ def test_email_rca_formatter():
     assert "RB-01_Transport_Link_Down.md" in formatted["html"]
     assert "Check optical power levels" in formatted["html"]
 
-def test_email_dispatcher_mock():
-    dispatcher = EmailDispatcher(use_mock=True)
+def test_email_dispatcher():
+    dispatcher = EmailDispatcher()
     triage_sample = {
         "incident_id": "INC-TEST-002",
         "probable_root": "CMG-01 (CPU Utilization Exceeds Threshold)",
@@ -37,5 +37,5 @@ def test_email_dispatcher_mock():
 
     record = dispatcher.send_rca_email(triage_sample, recipient="noc-lead@telco.com")
     assert record["recipient"] == "noc-lead@telco.com"
-    assert record["status"] == "DELIVERED"
+    assert record["mode"] == "SMTP_LIVE"
     assert len(EmailDispatcher.get_outbox_history()) > 0

@@ -25,7 +25,7 @@ def test_cloud_node_monitor_fault_simulation():
     retriever = RAGRetriever()
     tools = ToolRegistry(loader=loader, anomaly_checker=anomaly_checker, retriever=retriever)
     agent = TriageAgentLoop(tool_registry=tools, ranker=ranker)
-    mailer = EmailDispatcher(use_mock=True)
+    mailer = EmailDispatcher()
 
     daemon = CloudNodeMonitorDaemon(agent_loop=agent, mailer=mailer)
     

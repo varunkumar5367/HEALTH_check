@@ -41,7 +41,6 @@ class Settings(BaseSettings):
     SMTP_PASSWORD: str = "tnpwnlknepdakubk"
     ALERT_EMAIL_RECIPIENT: str = "varunakhil5367@gmail.com"
     SENDER_EMAIL: str = "varunakhil5367@gmail.com"
-    USE_MOCK_EMAIL: bool = False  # Enabled Live SMTP Relay by default using Gmail backend credentials
 
     class Config:
         case_sensitive = True

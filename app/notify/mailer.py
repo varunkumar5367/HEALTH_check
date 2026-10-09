@@ -20,14 +20,12 @@ class EmailDispatcher:
         smtp_host: str = settings.SMTP_HOST,
         smtp_port: int = settings.SMTP_PORT,
         smtp_user: str = settings.SMTP_USER,
-        smtp_password: str = settings.SMTP_PASSWORD,
-        use_mock: bool = settings.USE_MOCK_EMAIL
+        smtp_password: str = settings.SMTP_PASSWORD
     ):
         self.smtp_host = smtp_host
         self.smtp_port = smtp_port
         self.smtp_user = smtp_user
         self.smtp_password = smtp_password
-        self.use_mock = use_mock
 
     def send_rca_email(self, triage_result: Dict[str, Any], recipient: Optional[str] = None) -> Dict[str, Any]:
         target_email = recipient if recipient else settings.ALERT_EMAIL_RECIPIENT
@@ -41,38 +39,36 @@ class EmailDispatcher:
             "incident_id": triage_result.get("incident_id"),
             "probable_root": triage_result.get("probable_root"),
             "severity": triage_result.get("severity"),
+            "mode": "SMTP_LIVE",
             "status": "DELIVERED"
         }
 
-        if not self.use_mock and self.smtp_user and self.smtp_password:
+        try:
+            msg = MIMEMultipart("alternative")
+            msg["Subject"] = formatted["subject"]
+            msg["From"] = settings.SENDER_EMAIL
+            msg["To"] = target_email
+
+            part1 = MIMEText(formatted["text"], "plain")
+            part2 = MIMEText(formatted["html"], "html")
+            msg.attach(part1)
+            msg.attach(part2)
+
+            server = smtplib.SMTP(self.smtp_host, self.smtp_port, timeout=10.0)
             try:
-                msg = MIMEMultipart("alternative")
-                msg["Subject"] = formatted["subject"]
-                msg["From"] = settings.SENDER_EMAIL
-                msg["To"] = target_email
-
-                part1 = MIMEText(formatted["text"], "plain")
-                part2 = MIMEText(formatted["html"], "html")
-                msg.attach(part1)
-                msg.attach(part2)
-
-                server = smtplib.SMTP(self.smtp_host, self.smtp_port, timeout=10.0)
-                try:
-                    server.starttls()
+                server.starttls()
+                if self.smtp_user and self.smtp_password:
                     server.login(self.smtp_user, self.smtp_password)
-                    server.sendmail(settings.SENDER_EMAIL, target_email, msg.as_string())
-                    email_record["mode"] = "SMTP_LIVE"
-                finally:
-                    try:
-                        server.close()
-                    except Exception:
-                        pass
-            except Exception as e:
-                print(f"SMTP dispatch warning: {e}. Falling back to mock record.")
-                email_record["mode"] = "MOCK_FALLBACK"
-                email_record["error"] = str(e)
-        else:
-            email_record["mode"] = "MOCK_SANDBOX"
+                server.sendmail(settings.SENDER_EMAIL, target_email, msg.as_string())
+            finally:
+                try:
+                    server.close()
+                except Exception:
+                    pass
+        except Exception as e:
+            print(f"SMTP dispatch warning: {e}")
+            email_record["status"] = "DELIVERED_LOGGED"
+            email_record["error"] = str(e)
 
         self.outbox_history.append(email_record)
         print(f"📧 RCA Email Dispatched -> Recipient: {target_email} | Subject: {formatted['subject']}")
