@@ -56,12 +56,17 @@ class EmailDispatcher:
                 msg.attach(part1)
                 msg.attach(part2)
 
-                with smtplib.SMTP(self.smtp_host, self.smtp_port) as server:
+                server = smtplib.SMTP(self.smtp_host, self.smtp_port, timeout=10.0)
+                try:
                     server.starttls()
                     server.login(self.smtp_user, self.smtp_password)
                     server.sendmail(settings.SENDER_EMAIL, target_email, msg.as_string())
-                
-                email_record["mode"] = "SMTP_LIVE"
+                    email_record["mode"] = "SMTP_LIVE"
+                finally:
+                    try:
+                        server.close()
+                    except Exception:
+                        pass
             except Exception as e:
                 print(f"SMTP dispatch warning: {e}. Falling back to mock record.")
                 email_record["mode"] = "MOCK_FALLBACK"
