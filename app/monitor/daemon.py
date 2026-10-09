@@ -38,22 +38,21 @@ class CloudNodeMonitorDaemon:
         
         self.event_log: List[Dict[str, Any]] = []
 
-    def add_node(self, node_id: str, host: str = "127.0.0.1", port: int = 22, node_type: str = "CMG") -> CloudNodeConnection:
+    def add_node(self, node_id: str, host: str = "127.0.0.1", port: int = 22, node_type: str = "CMG") -> tuple:
         """Dynamically registers and connects a new Cloud Node / VM for real-time monitoring."""
-        # Check if already present
         for conn in self.nodes:
             if conn.node_id == node_id:
                 conn.host = host
                 conn.port = port
                 conn.node_type = node_type
-                conn.connect()
-                return conn
+                res = conn.connect()
+                return conn, res
 
         new_conn = CloudNodeConnection(node_id=node_id, host=host, port=port, node_type=node_type)
-        new_conn.connect()
+        res = new_conn.connect()
         self.nodes.append(new_conn)
         print(f"[MONITOR] Connected new cloud node {node_id} ({host}:{port}) [{node_type}]")
-        return new_conn
+        return new_conn, res
 
     def start(self):
         """Starts the continuous background monitoring loop."""

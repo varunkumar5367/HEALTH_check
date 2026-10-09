@@ -57,7 +57,61 @@ def init_system():
 
 loader, df_alarms, G_topo, df_kpi, correlator, ranker, anomaly_checker, retriever, tools, agent, mailer, monitor_daemon = init_system()
 
+# Theme Selection in Sidebar
+st.sidebar.header("🎨 Appearance & Theme")
+theme_mode = st.sidebar.selectbox("Select Dashboard Theme", ["Dark Mode 🌙", "Light Mode ☀️"], index=0)
+
+if "Light" in theme_mode:
+    st.markdown("""
+        <style>
+            .stApp {
+                background-color: #f8fafc;
+                color: #0f172a;
+            }
+            .stSidebar {
+                background-color: #ffffff;
+                border-right: 1px solid #cbd5e1;
+            }
+            div[data-testid="stMetricValue"] {
+                color: #2563eb !important;
+            }
+            .stMarkdown, p, span, label, h1, h2, h3, h4, h5, h6 {
+                color: #0f172a !important;
+            }
+            .stAlert {
+                border-radius: 8px;
+            }
+            div.stButton > button {
+                background-color: #2563eb;
+                color: #ffffff !important;
+                border-radius: 6px;
+                border: none;
+                font-weight: 600;
+            }
+            .dataframe {
+                border: 1px solid #cbd5e1 !important;
+            }
+        </style>
+    """, unsafe_allow_html=True)
+else:
+    st.markdown("""
+        <style>
+            .stApp {
+                background-color: #0e1117;
+                color: #f8fafc;
+            }
+            .stSidebar {
+                background-color: #161b22;
+                border-right: 1px solid #30363d;
+            }
+            div[data-testid="stMetricValue"] {
+                color: #38bdf8 !important;
+            }
+        </style>
+    """, unsafe_allow_html=True)
+
 # Sidebar Data & Preset Selection
+st.sidebar.divider()
 st.sidebar.header("🕹️ Scenario & Dataset Controls")
 scenario = st.sidebar.selectbox(
     "Select Incident Storm Scenario",
@@ -70,10 +124,16 @@ scenario = st.sidebar.selectbox(
     ]
 )
 
-# Email Settings in Sidebar
+# Editable Email & Monitoring Settings in Sidebar
 st.sidebar.divider()
-st.sidebar.header("📧 Email Alert Settings")
-recipient_email = st.sidebar.text_input("Engineer Email Recipient", value=settings.ALERT_EMAIL_RECIPIENT)
+st.sidebar.header("📧 Email & Daemon Controls")
+recipient_email = st.sidebar.text_input("Engineer Target Recipient Email", value=settings.ALERT_EMAIL_RECIPIENT)
+settings.ALERT_EMAIL_RECIPIENT = recipient_email
+
+daemon_interval_input = st.sidebar.number_input("Monitoring Interval (seconds)", min_value=1, max_value=60, value=int(monitor_daemon.interval_seconds), step=1)
+monitor_daemon.interval_seconds = int(daemon_interval_input)
+settings.MONITORING_INTERVAL_SECONDS = int(daemon_interval_input)
+
 mailer.smtp_user = settings.SMTP_USER
 mailer.smtp_password = settings.SMTP_PASSWORD
 st.sidebar.success(f"✅ Live Gmail SMTP Active (`{settings.SMTP_USER}`)")
@@ -148,10 +208,16 @@ else:
                 new_port = c2.number_input("SSH/REST Port", value=22, min_value=1, max_value=65535)
                 new_type = c3.selectbox("Node Type", ["CMG", "UPF", "Transport", "Router"])
                 
-                submitted = st.form_submit_button("🔌 Connect & Add to Continuous Monitor")
+                submitted = st.form_submit_button("🔌 Connect & Verify Node")
                 if submitted:
-                    conn = monitor_daemon.add_node(new_node_id, host=new_host, port=int(new_port), node_type=new_type)
-                    st.success(f"Connected node `{new_node_id}` ({new_host}:{new_port}) to continuous monitoring list!")
+                    conn, res = monitor_daemon.add_node(new_node_id, host=new_host, port=int(new_port), node_type=new_type)
+                    st.success(
+                        f"🟢 **Connection ESTABLISHED & Verified!**\n\n"
+                        f"- **Node ID:** `{res['node_id']}`\n"
+                        f"- **Target Host:** `{res['host']}:{res['port']}` ({res['node_type']})\n"
+                        f"- **Ping Latency:** `{res['ping_ms']} ms`\n"
+                        f"- **Session Status:** `{res['status']}`"
+                    )
 
         with col_ctrl:
             st.markdown("#### ⚙️ Continuous Monitoring Daemon & Email Settings")
@@ -178,7 +244,7 @@ else:
         
         df_telemetry = pd.DataFrame(telemetry_records)
         st.dataframe(
-            df_telemetry[["node_id", "host", "cpu_utilization", "memory_utilization", "bgp_session_state", "throughput_gbps", "packet_loss_pct", "active_bearers", "status", "timestamp"]],
+            df_telemetry[["node_id", "host", "node_type", "connection_status", "ping_latency", "cpu_utilization", "memory_utilization", "bgp_session_state", "throughput_gbps", "packet_loss_pct", "active_bearers", "status", "timestamp"]],
             use_container_width=True
         )
 

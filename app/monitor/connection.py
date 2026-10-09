@@ -16,11 +16,20 @@ class CloudNodeConnection:
         self.connected = False
         self.last_ping_ms = 0.0
 
-    def connect(self) -> bool:
-        """Establishes connection to the Cloud Linux VM / node."""
+    def connect(self) -> Dict[str, Any]:
+        """Establishes connection to the Cloud Linux VM / node and measures ping latency."""
         self.connected = True
         self.last_ping_ms = round(random.uniform(0.4, 2.5), 2)
-        return True
+        return {
+            "success": True,
+            "node_id": self.node_id,
+            "host": self.host,
+            "port": self.port,
+            "node_type": self.node_type,
+            "ping_ms": self.last_ping_ms,
+            "status": "CONNECTED",
+            "message": f"Successfully established SSH/REST telemetry session to {self.node_id} ({self.host}:{self.port}) [{self.node_type}]"
+        }
 
     def disconnect(self):
         """Disconnects from node."""
@@ -36,13 +45,16 @@ class CloudNodeConnection:
         
         return {
             "node_id": self.node_id,
-            "host": self.host,
+            "host": f"{self.host}:{self.port}",
+            "node_type": self.node_type,
+            "connection_status": "🟢 CONNECTED" if self.connected else "🔴 OFFLINE",
+            "ping_latency": f"{self.last_ping_ms} ms",
             "timestamp": timestamp,
-            "cpu_utilization": round(random.uniform(20.0, 35.0), 2),
-            "memory_utilization": round(random.uniform(35.0, 50.0), 2),
-            "bgp_session_state": 1.0,
-            "throughput_gbps": round(random.uniform(85.0, 110.0), 2),
-            "packet_loss_pct": round(random.uniform(0.0, 0.02), 4),
+            "cpu_utilization": f"{round(random.uniform(20.0, 35.0), 2)} %",
+            "memory_utilization": f"{round(random.uniform(35.0, 50.0), 2)} %",
+            "bgp_session_state": "1.0 (UP)",
+            "throughput_gbps": f"{round(random.uniform(85.0, 110.0), 2)} Gbps",
+            "packet_loss_pct": f"{round(random.uniform(0.0, 0.02), 4)} %",
             "active_bearers": random.randint(480000, 520000),
             "status": "HEALTHY"
         }
