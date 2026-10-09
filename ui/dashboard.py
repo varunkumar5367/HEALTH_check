@@ -57,6 +57,10 @@ def init_system():
 
 loader, df_alarms, G_topo, df_kpi, correlator, ranker, anomaly_checker, retriever, tools, agent, mailer, monitor_daemon = init_system()
 
+@st.cache_data(show_spinner=False)
+def run_triage_cached(inc_id: str, _target_inc: dict):
+    return agent.run_triage(_target_inc)
+
 # Theme Selection in Sidebar
 st.sidebar.header("🎨 Appearance & Theme")
 theme_mode = st.sidebar.selectbox("Select Dashboard Theme", ["Dark Mode 🌙", "Light Mode ☀️"], index=0)
@@ -171,8 +175,8 @@ else:
     
     target_inc = incidents[selected_inc_idx]
     
-    # Run Agent Loop
-    triage_res = agent.run_triage(target_inc)
+    # Run Agent Loop (Cached for sub-ms render)
+    triage_res = run_triage_cached(target_inc['id'], target_inc)
     
     # Overview Banner
     sev_color = "🔴" if triage_res["severity"] == "CRITICAL" else ("🟠" if triage_res["severity"] == "HIGH" else "🟡")
@@ -201,23 +205,40 @@ else:
 
         with col_add:
             st.markdown("#### ➕ Connect New Cloud Node / Linux VM")
+            preset_choice = st.selectbox(
+                "⚡ Quick Fill Free Sample Node",
+                ["Custom Node Input", "Sample 1: CMG-04 (10.95.176.104:22 [CMG])", "Sample 2: UPF-03 (10.95.46.173:22 [UPF])", "Sample 3: BORDER-GW-01 (192.168.10.1:443 [Router])"]
+            )
+            
+            def_id, def_host, def_port, def_type = "CMG-04", "10.95.176.104", 22, "CMG"
+            if "Sample 1" in preset_choice:
+                def_id, def_host, def_port, def_type = "CMG-04", "10.95.176.104", 22, "CMG"
+            elif "Sample 2" in preset_choice:
+                def_id, def_host, def_port, def_type = "UPF-03", "10.95.46.173", 22, "UPF"
+            elif "Sample 3" in preset_choice:
+                def_id, def_host, def_port, def_type = "BORDER-GW-01", "192.168.10.1", 443, "Router"
+
             with st.form("add_node_form"):
-                new_node_id = st.text_input("Node ID / Hostname", value="CMG-04", help="Unique node identifier (e.g. CMG-04, UPF-03)")
+                new_node_id = st.text_input("Node ID / Hostname", value=def_id, help="Unique node identifier (e.g. CMG-04, UPF-03)")
                 c1, c2, c3 = st.columns(3)
-                new_host = c1.text_input("IP Address / Host", value="10.95.176.104")
-                new_port = c2.number_input("SSH/REST Port", value=22, min_value=1, max_value=65535)
-                new_type = c3.selectbox("Node Type", ["CMG", "UPF", "Transport", "Router"])
+                new_host = c1.text_input("IP Address / Host", value=def_host)
+                new_port = c2.number_input("SSH/REST Port", value=int(def_port), min_value=1, max_value=65535)
+                new_type = c3.selectbox("Node Type", ["CMG", "UPF", "Transport", "Router"], index=["CMG", "UPF", "Transport", "Router"].index(def_type) if def_type in ["CMG", "UPF", "Transport", "Router"] else 0)
                 
                 submitted = st.form_submit_button("🔌 Connect & Verify Node")
                 if submitted:
                     conn, res = monitor_daemon.add_node(new_node_id, host=new_host, port=int(new_port), node_type=new_type)
-                    st.success(
-                        f"🟢 **Connection ESTABLISHED & Verified!**\n\n"
-                        f"- **Node ID:** `{res['node_id']}`\n"
-                        f"- **Target Host:** `{res['host']}:{res['port']}` ({res['node_type']})\n"
-                        f"- **Ping Latency:** `{res['ping_ms']} ms`\n"
-                        f"- **Session Status:** `{res['status']}`"
-                    )
+                    st.session_state["last_node_result"] = res
+
+            if "last_node_result" in st.session_state:
+                res = st.session_state["last_node_result"]
+                st.success(
+                    f"🟢 **Connection ESTABLISHED & Verified!**\n\n"
+                    f"- **Node ID:** `{res['node_id']}`\n"
+                    f"- **Target Host:** `{res['host']}:{res['port']}` ({res['node_type']})\n"
+                    f"- **Ping Latency:** `{res['ping_ms']} ms`\n"
+                    f"- **Session Status:** `{res['status']}`"
+                )
 
         with col_ctrl:
             st.markdown("#### ⚙️ Continuous Monitoring Daemon & Email Settings")
