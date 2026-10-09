@@ -1,16 +1,19 @@
 import sys
+import os
 from pathlib import Path
 
-# Add project root directory to sys.path so app module is always resolvable
+# Add project root directory to sys.path so app module is always resolvable at top priority
 BASE_DIR = Path(__file__).resolve().parent.parent
-if str(BASE_DIR) not in sys.path:
-    sys.path.insert(0, str(BASE_DIR))
+if str(BASE_DIR) in sys.path:
+    sys.path.remove(str(BASE_DIR))
+sys.path.insert(0, str(BASE_DIR))
 
 import streamlit as st
 import pandas as pd
 import requests
 import networkx as nx
 import json
+from datetime import datetime
 
 from app.config import settings
 from app.ingest.loaders import DataLoader
@@ -20,6 +23,9 @@ from app.kpi.anomaly import KPIAnomalyChecker
 from app.rag.retriever import RAGRetriever
 from app.agent.tools import ToolRegistry
 from app.agent.loop import TriageAgentLoop
+from app.notify.mailer import EmailDispatcher
+from app.notify.email_formatter import EmailRCAFormatter
+from app.monitor.daemon import CloudNodeMonitorDaemon
 
 st.set_page_config(
     page_title="Network Triage Agent - PS06",
@@ -27,8 +33,8 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("📡 Network Health-Check and Alarm Triage Agent")
-st.markdown("*Autonomous Read-Only Alarm Storm Correlation, Root Cause Analysis & Runbook-Cited Triage Summary*")
+st.title("📡 Network Health-Check, Cloud Monitor & Alarm Triage Agent")
+st.markdown("*Autonomous Cloud Node Monitoring, Error Detection, Root Cause Analysis & Cited Solution Email Dispatch*")
 
 # Load Backend Singletons
 @st.cache_resource
@@ -44,10 +50,12 @@ def init_system():
     retriever = RAGRetriever()
     tools = ToolRegistry(loader=loader, anomaly_checker=anomaly_checker, retriever=retriever)
     agent = TriageAgentLoop(tool_registry=tools, ranker=ranker)
+    mailer = EmailDispatcher()
+    monitor_daemon = CloudNodeMonitorDaemon(agent_loop=agent, mailer=mailer)
     
-    return loader, df_alarms, G_topo, df_kpi, correlator, ranker, anomaly_checker, retriever, tools, agent
+    return loader, df_alarms, G_topo, df_kpi, correlator, ranker, anomaly_checker, retriever, tools, agent, mailer, monitor_daemon
 
-loader, df_alarms, G_topo, df_kpi, correlator, ranker, anomaly_checker, retriever, tools, agent = init_system()
+loader, df_alarms, G_topo, df_kpi, correlator, ranker, anomaly_checker, retriever, tools, agent, mailer, monitor_daemon = init_system()
 
 # Sidebar Data & Preset Selection
 st.sidebar.header("🕹️ Scenario & Dataset Controls")
@@ -61,6 +69,20 @@ scenario = st.sidebar.selectbox(
         "All Synthetic Alarms (~500 Alarms)"
     ]
 )
+
+# Email Settings in Sidebar
+st.sidebar.divider()
+st.sidebar.header("📧 Email Alert Settings")
+recipient_email = st.sidebar.text_input("Engineer Email Recipient", value=settings.ALERT_EMAIL_RECIPIENT)
+smtp_mode = st.sidebar.radio("Email Dispatch Mode", ["Live SMTP Relay", "Sandbox Outbox (Mock)"], index=0)
+
+if smtp_mode == "Live SMTP Relay":
+    mailer.use_mock = False
+    mailer.smtp_user = settings.SMTP_USER
+    mailer.smtp_password = settings.SMTP_PASSWORD
+    st.sidebar.success(f"✅ Live Gmail SMTP Active (`{settings.SMTP_USER}`)")
+else:
+    mailer.use_mock = True
 
 # Filter alarms based on selection
 if "Storm 1" in scenario:
@@ -78,11 +100,12 @@ else:
 incidents = correlator.correlate(filtered_alarms)
 
 # Metric Summary Cards
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3, col4, col5 = st.columns(5)
 col1.metric("Raw Alarms Ingested", len(filtered_alarms))
 col2.metric("Correlated Incidents", len(incidents))
-col3.metric("Topology Nodes Monitored", len(G_topo.nodes))
-col4.metric("Agent Mode", "READ-ONLY (Human Gated)")
+col3.metric("Cloud Nodes Monitored", len(G_topo.nodes))
+col4.metric("Live Daemon", "ACTIVE" if monitor_daemon.running else "STOPPED")
+col5.metric("Outbox Emails Sent", len(mailer.outbox_history))
 
 st.divider()
 
@@ -110,10 +133,100 @@ else:
     st.markdown(f"**Grouping Rationale:** {triage_res['grouping_rationale']}")
 
     # Tabs for Triage Views
-    tab_overview, tab_topology, tab_kpi, tab_trace, tab_checks, tab_ticket = st.tabs([
-        "📊 Alarms & Symptoms", "🌐 Topology Graph", "📈 KPI Baseline & Anomalies",
-        "🧠 Agent Reasoning Trace", "📚 Cited Runbook Checks", "🎫 Draft Ticket & Action"
+    tab_cloud, tab_overview, tab_topology, tab_kpi, tab_trace, tab_checks, tab_ticket = st.tabs([
+        "☁️ Cloud Monitor & Email Alert", "📊 Alarms & Symptoms", "🌐 Topology Graph",
+        "📈 KPI Baseline & Anomalies", "🧠 Agent Reasoning Trace", "📚 Cited Runbook Checks", "🎫 Draft Ticket & Action"
     ])
+
+    with tab_cloud:
+        st.markdown("### ☁️ Continuous Cloud Node Monitoring & Automated Email RCA Dispatch")
+        st.info("The agent continuously polls connected Cloud Nodes/Linux VMs. Upon parameter fluctuation or KPI failure, it auto-detects errors, executes Root Cause Analysis (RCA), and dispatches cited solution emails directly to the designated NOC engineer.")
+
+        # Top Columns: Node Input Form & Daemon Control
+        col_add, col_ctrl = st.columns(2)
+
+        with col_add:
+            st.markdown("#### ➕ Connect New Cloud Node / Linux VM")
+            with st.form("add_node_form"):
+                new_node_id = st.text_input("Node ID / Hostname", value="CMG-04", help="Unique node identifier (e.g. CMG-04, UPF-03)")
+                c1, c2, c3 = st.columns(3)
+                new_host = c1.text_input("IP Address / Host", value="10.95.176.104")
+                new_port = c2.number_input("SSH/REST Port", value=22, min_value=1, max_value=65535)
+                new_type = c3.selectbox("Node Type", ["CMG", "UPF", "Transport", "Router"])
+                
+                submitted = st.form_submit_button("🔌 Connect & Add to Continuous Monitor")
+                if submitted:
+                    conn = monitor_daemon.add_node(new_node_id, host=new_host, port=int(new_port), node_type=new_type)
+                    st.success(f"Connected node `{new_node_id}` ({new_host}:{new_port}) to continuous monitoring list!")
+
+        with col_ctrl:
+            st.markdown("#### ⚙️ Continuous Monitoring Daemon & Email Settings")
+            daemon_active = st.toggle("Enable Continuous Cloud Monitoring Daemon", value=monitor_daemon.running)
+            if daemon_active != monitor_daemon.running:
+                if daemon_active:
+                    monitor_daemon.start()
+                    st.success("Cloud Monitoring Daemon STARTED!")
+                else:
+                    monitor_daemon.stop()
+                    st.warning("Cloud Monitoring Daemon STOPPED.")
+            
+            st.markdown(f"**Daemon Status:** `{'ACTIVE' if monitor_daemon.running else 'STOPPED'}` | **Interval:** `{monitor_daemon.interval_seconds}s`")
+            st.markdown(f"**Target Recipient:** `{recipient_email}`")
+            st.markdown(f"**Active Dispatch Mode:** `{'Sandbox Outbox (Mock)' if mailer.use_mock else 'Live SMTP Relay'}`")
+
+        st.divider()
+
+        # Section: Live Telemetry Parameters Table
+        st.markdown("#### 🖥️ Monitored Cloud Nodes & Live Telemetry Parameters")
+        telemetry_records = []
+        for conn in monitor_daemon.nodes:
+            telemetry_records.append(conn.poll_telemetry())
+        
+        df_telemetry = pd.DataFrame(telemetry_records)
+        st.dataframe(
+            df_telemetry[["node_id", "host", "cpu_utilization", "memory_utilization", "bgp_session_state", "throughput_gbps", "packet_loss_pct", "active_bearers", "status", "timestamp"]],
+            use_container_width=True
+        )
+
+        st.divider()
+
+        # Section: Fault Simulation & Automated Email Trigger
+        st.markdown("#### ⚡ Real-time Cloud Error Detection & Email Dispatch Trigger")
+        st.markdown("Simulate an unexpected parameter fluctuation on any connected node to test automatic error detection, AI RCA generation, and email dispatch:")
+        
+        sim_col1, sim_col2, sim_col3 = st.columns([2, 2, 3])
+        with sim_col1:
+            all_node_ids = [conn.node_id for conn in monitor_daemon.nodes]
+            test_node = st.selectbox("Target Monitored Node", all_node_ids)
+        with sim_col2:
+            test_code = st.selectbox("Simulated Parameter Fault", ["LINK_DOWN", "CPU_HIGH", "BGP_PEER_DOWN", "PFCP_HEARTBEAT_FAIL", "PACKET_LOSS_HIGH"])
+        with sim_col3:
+            st.markdown("<br>", unsafe_allow_html=True)
+            trigger_btn = st.button("🚨 Simulate Error & Dispatch RCA Email", use_container_width=True)
+
+        if trigger_btn:
+            fault_res = monitor_daemon.simulate_node_fault(
+                node_id=test_node,
+                alarm_code=test_code,
+                alarm_name=test_code.replace("_", " ").title(),
+                recipient_email=recipient_email
+            )
+            st.success(f"⚠️ Error detected on cloud node `{test_node}`! Triage completed and Solution Email dispatched to `{recipient_email}`.")
+            with st.expander("📄 View Dispatched Email Payload & Dispatch Audit Log", expanded=True):
+                st.json(fault_res["email_dispatch"])
+
+        st.divider()
+        st.markdown("### 📧 Outbox History & Generated Solution Email Preview")
+        if mailer.outbox_history:
+            st.dataframe(pd.DataFrame(mailer.outbox_history), use_container_width=True)
+            
+            # Preview latest email
+            latest_email = mailer.outbox_history[-1]
+            st.markdown(f"#### ✉️ Preview Latest Dispatched Email (`{latest_email['dispatch_id']}` -> `{latest_email['recipient']}`)")
+            formatted_email = EmailRCAFormatter.format_rca_email(triage_res, recipient_email)
+            st.components.v1.html(formatted_email["html"], height=500, scrolling=True)
+        else:
+            st.caption("No emails dispatched in this session yet. Click the button above to simulate an error and send a solution email!")
 
     with tab_overview:
         c_left, c_right = st.columns(2)
@@ -192,10 +305,15 @@ else:
         
         confirm = st.checkbox("I validate and confirm these triage findings as a NOC/SNOC Engineer.")
         
-        act_col1, act_col2 = st.columns(2)
+        act_col1, act_col2, act_col3 = st.columns(3)
         with act_col1:
-            if st.button("📢 Send Teams / Email Notification", disabled=not confirm):
+            if st.button("📢 Send Teams Notification", disabled=not confirm):
                 st.success("Notification delivered to NOC Teams Channel! Payload stored in notification registry.")
         with act_col2:
+            if st.button("📧 Dispatch RCA Solution Email", disabled=not confirm):
+                mail_res = mailer.send_rca_email(triage_res, recipient=recipient_email)
+                st.success(f"RCA Solution Email successfully dispatched to {recipient_email}!")
+                st.json(mail_res)
+        with act_col3:
             if st.button("🎫 Create Ticket in ITSM", disabled=not confirm):
                 st.success(f"Ticket {draft['ticket_id']} successfully submitted to ITSM!")

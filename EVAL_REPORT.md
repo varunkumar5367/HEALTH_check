@@ -13,7 +13,7 @@ This report presents the benchmark performance results of the **Network Health-C
 | **Probable Root Top-1 Accuracy** | >90.0% | **100.0%** | PASS |
 | **Severity Rule Match** | 100.0% | **100.0%** | PASS |
 | **Runbook Citation Rate** | 100.0% | **100.0%** | PASS |
-| **Average Processing Latency** | <500 ms | **20.8 ms** | PASS |
+| **Average Processing Latency** | <500 ms | **20.3 ms** | PASS |
 
 ---
 
@@ -21,10 +21,10 @@ This report presents the benchmark performance results of the **Network Health-C
 
 | Scenario                   |   Raw Alarms |   Correlated Incidents | Expected Root   | Predicted Root   | Top-1 Match   | Assigned Severity   | Severity Match   | Citation Rate   | Latency (ms)   |
 |:---------------------------|-------------:|-----------------------:|:----------------|:-----------------|:--------------|:--------------------|:-----------------|:----------------|:---------------|
-| Storm 1 (Sample Scenario)  |           40 |                      1 | LINK-A          | LINK-A           | PASS          | CRITICAL            | PASS             | 100%            | 14.3 ms        |
-| Storm 2 (CPU/Memory Spike) |           80 |                      1 | CMG-01          | CMG-01           | PASS          | CRITICAL            | PASS             | 100%            | 28.8 ms        |
-| Storm 3 (PFCP Timeout)     |           70 |                      1 | CMG-03          | CMG-03           | PASS          | CRITICAL            | PASS             | 100%            | 26.2 ms        |
-| Storm 4 (Fiber Cut LINK-B) |           60 |                      1 | LINK-B          | LINK-B           | PASS          | CRITICAL            | PASS             | 100%            | 14.0 ms        |
+| Storm 1 (Sample Scenario)  |           40 |                      1 | LINK-A          | LINK-A           | PASS          | CRITICAL            | PASS             | 100%            | 16.0 ms        |
+| Storm 2 (CPU/Memory Spike) |           80 |                      1 | CMG-01          | CMG-01           | PASS          | CRITICAL            | PASS             | 100%            | 27.5 ms        |
+| Storm 3 (PFCP Timeout)     |           70 |                      1 | CMG-03          | CMG-03           | PASS          | CRITICAL            | PASS             | 100%            | 22.6 ms        |
+| Storm 4 (Fiber Cut LINK-B) |           60 |                      1 | LINK-B          | LINK-B           | PASS          | CRITICAL            | PASS             | 100%            | 15.0 ms        |
 
 ---
 

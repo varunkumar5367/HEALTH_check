@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     TOPOLOGY_MAX_HOPS: int = 2
     
     # KPI Anomaly Config
-    KPI_ROLLING_WINDOW: int = 12  # e.g. 12 data points (1 hour at 5-min intervals)
+    KPI_ROLLING_WINDOW: int = 12
     KPI_Z_SCORE_THRESHOLD: float = 2.5
     
     # Agent Guardrails Config
@@ -32,7 +32,17 @@ class Settings(BaseSettings):
     
     # Vector DB / Embeddings Config
     EMBEDDING_MODEL: str = "all-MiniLM-L6-v2"
-    
+
+    # Cloud Node Monitoring & Email Alert Config
+    MONITORING_INTERVAL_SECONDS: int = 5
+    SMTP_HOST: str = "smtp.gmail.com"
+    SMTP_PORT: int = 587
+    SMTP_USER: str = "varunakhil5367@gmail.com"
+    SMTP_PASSWORD: str = "tnpwnlknepdakubk"
+    ALERT_EMAIL_RECIPIENT: str = "varunakhil5367@gmail.com"
+    SENDER_EMAIL: str = "varunakhil5367@gmail.com"
+    USE_MOCK_EMAIL: bool = False  # Enabled Live SMTP Relay by default using Gmail backend credentials
+
     class Config:
         case_sensitive = True
 

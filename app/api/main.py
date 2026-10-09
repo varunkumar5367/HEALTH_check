@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 from typing import List, Dict, Any, Optional
 import json
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timezone
 
 from app.config import settings
 from app.ingest.loaders import DataLoader
@@ -15,11 +15,13 @@ from app.kpi.anomaly import KPIAnomalyChecker
 from app.rag.retriever import RAGRetriever
 from app.agent.tools import ToolRegistry
 from app.agent.loop import TriageAgentLoop
+from app.notify.mailer import EmailDispatcher
+from app.monitor.daemon import CloudNodeMonitorDaemon
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
-    description="Network Health-Check and Alarm Triage Agent REST API",
-    version="1.0.0",
+    description="Network Health-Check, Cloud Monitoring, and Alarm Triage Agent REST API",
+    version="2.0.0",
     docs_url="/docs",
     redoc_url="/redoc"
 )
@@ -37,6 +39,9 @@ retriever = RAGRetriever()
 tool_registry = ToolRegistry(loader=loader, anomaly_checker=anomaly_checker, retriever=retriever)
 agent_loop = TriageAgentLoop(tool_registry=tool_registry, ranker=ranker)
 
+mailer = EmailDispatcher()
+monitor_daemon = CloudNodeMonitorDaemon(agent_loop=agent_loop, mailer=mailer)
+
 # In-memory stores for notifications and tickets
 notification_store: List[Dict[str, Any]] = []
 ticket_store: Dict[str, Dict[str, Any]] = {}
@@ -48,12 +53,22 @@ class NotifyRequest(BaseModel):
     recipient: str = Field(..., json_schema_extra={"example": "noc-engineering@telco.net"})
     message: str = Field(..., json_schema_extra={"example": "[CRITICAL] Triage complete for INC-20261008-001. Probable Root: LINK-A"})
 
+class EmailRCAAlertRequest(BaseModel):
+    incident_id: str = Field(..., json_schema_extra={"example": "INC-20261008-001"})
+    recipient_email: str = Field(..., json_schema_extra={"example": "engineer@telco.com"})
+
 class TicketRequest(BaseModel):
     incident_id: str = Field(..., json_schema_extra={"example": "INC-20261008-001"})
     title: str = Field(..., json_schema_extra={"example": "[CRITICAL] Physical Fiber Link Down on LINK-A"})
     severity: str = Field(..., json_schema_extra={"example": "CRITICAL"})
     description: str = Field(..., json_schema_extra={"example": "Automated draft ticket for LINK-A transport loss."})
     assignee: str = Field(default="NOC Tier-2")
+
+class SimulateFaultRequest(BaseModel):
+    node_id: str = Field(..., json_schema_extra={"example": "LINK-A"})
+    alarm_code: str = Field(default="LINK_DOWN", json_schema_extra={"example": "LINK_DOWN"})
+    alarm_name: str = Field(default="Physical Fiber Link Down", json_schema_extra={"example": "Physical Fiber Link Down"})
+    recipient_email: Optional[str] = Field(default="noc-engineer@telco-ops.com")
 
 # API Routes
 @app.get("/health", tags=["Health"])
@@ -63,7 +78,8 @@ def get_health():
         "service": settings.PROJECT_NAME,
         "alarms_loaded": len(df_alarms),
         "kpis_loaded": len(df_kpi),
-        "topology_nodes": list(G_topo.nodes)
+        "topology_nodes": list(G_topo.nodes),
+        "monitoring_active": monitor_daemon.running
     }
 
 @app.post("/alarms", tags=["Alarms"])
@@ -115,11 +131,46 @@ def get_triage(incident_id: str):
     triage_result = agent_loop.run_triage(matched[0])
     return triage_result
 
+# Cloud Node Monitoring API Endpoints
+@app.post("/monitor/start", tags=["Cloud Monitoring"])
+def start_monitoring():
+    """Starts continuous cloud node monitoring daemon."""
+    monitor_daemon.start()
+    return {"status": "started", "interval_seconds": monitor_daemon.interval_seconds}
+
+@app.post("/monitor/stop", tags=["Cloud Monitoring"])
+def stop_monitoring():
+    """Stops continuous cloud node monitoring daemon."""
+    monitor_daemon.stop()
+    return {"status": "stopped"}
+
+@app.get("/monitor/status", tags=["Cloud Monitoring"])
+def get_monitoring_status():
+    """Returns monitoring status and node connections."""
+    return {
+        "active": monitor_daemon.running,
+        "nodes_monitored": [c.node_id for c in monitor_daemon.nodes],
+        "total_events_logged": len(monitor_daemon.event_log),
+        "recent_events": monitor_daemon.event_log[-5:]
+    }
+
+@app.post("/monitor/simulate-fault", tags=["Cloud Monitoring"])
+def simulate_cloud_node_fault(payload: SimulateFaultRequest):
+    """Simulates a parameter error on a cloud node, runs automated RCA, and emails solution report."""
+    res = monitor_daemon.simulate_node_fault(
+        node_id=payload.node_id,
+        alarm_code=payload.alarm_code,
+        alarm_name=payload.alarm_name,
+        recipient_email=payload.recipient_email
+    )
+    return res
+
+# Notification & Email Endpoints
 @app.post("/notify", tags=["Notifications"])
 def send_notification(payload: NotifyRequest):
     """Mock Teams / Email notification endpoint."""
     record = payload.model_dump()
-    record["timestamp"] = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    record["timestamp"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     notification_store.append(record)
     return {
         "status": "delivered",
@@ -128,9 +179,29 @@ def send_notification(payload: NotifyRequest):
         "recipient": payload.recipient
     }
 
-@app.get("/notifications", tags=["Notifications"])
-def list_notifications():
-    return {"total": len(notification_store), "notifications": notification_store}
+@app.post("/notify/email", tags=["Notifications"])
+def dispatch_rca_email(payload: EmailRCAAlertRequest):
+    """Triggers automated RCA & Cited Solution HTML Email dispatch to engineer."""
+    incidents = correlator.correlate(df_alarms)
+    matched = [inc for inc in incidents if inc["id"] == payload.incident_id]
+    if not matched:
+        try:
+            idx = int(payload.incident_id.split("-")[-1]) - 1
+            if 0 <= idx < len(incidents):
+                matched = [incidents[idx]]
+        except Exception:
+            pass
+    if not matched:
+        raise HTTPException(status_code=404, detail=f"Incident {payload.incident_id} not found.")
+
+    triage_result = agent_loop.run_triage(matched[0])
+    email_res = mailer.send_rca_email(triage_result, recipient=payload.recipient_email)
+    return {"status": "email_sent", "email_details": email_res}
+
+@app.get("/notify/outbox", tags=["Notifications"])
+def get_email_outbox():
+    """Returns outbox history of all dispatched RCA emails."""
+    return {"total_emails": len(mailer.outbox_history), "outbox": mailer.outbox_history}
 
 @app.post("/ticket", tags=["Ticketing"])
 def create_ticket(payload: TicketRequest):
@@ -138,7 +209,7 @@ def create_ticket(payload: TicketRequest):
     ticket_id = f"TICK-{payload.incident_id.replace('INC-', '')}"
     record = payload.model_dump()
     record["ticket_id"] = ticket_id
-    record["created_at"] = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+    record["created_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     ticket_store[ticket_id] = record
     return {
         "status": "created",

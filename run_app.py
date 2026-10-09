@@ -6,7 +6,7 @@ from pathlib import Path
 
 def main():
     print("==========================================================")
-    print(" 📡 Launching Network Health-Check and Alarm Triage Agent")
+    print(" Launching Network Health-Check and Alarm Triage Agent")
     print("==========================================================")
     
     BASE_DIR = Path(__file__).resolve().parent
@@ -17,6 +17,7 @@ def main():
     print("\n[1/2] Starting FastAPI REST API backend on http://localhost:8000 ...")
     api_process = subprocess.Popen(
         [sys.executable, "-m", "uvicorn", "app.api.main:app", "--host", "0.0.0.0", "--port", "8000"],
+        cwd=str(BASE_DIR),
         env=env,
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
@@ -25,17 +26,18 @@ def main():
     
     time.sleep(2)
     
-    # 2. Start Streamlit UI
+    # 2. Start Streamlit UI pointing to ui/dashboard.py
     print("\n[2/2] Starting Streamlit Interactive Dashboard on http://localhost:8501 ...")
     ui_process = subprocess.Popen(
-        [sys.executable, "-m", "streamlit", "run", "ui/app.py", "--server.port", "8501"],
+        [sys.executable, "-m", "streamlit", "run", "ui/dashboard.py", "--server.port", "8501"],
+        cwd=str(BASE_DIR),
         env=env,
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         text=True
     )
     
-    print("\n✅ System running successfully!")
+    print("\n[OK] System running successfully!")
     print(" - Streamlit Dashboard: http://localhost:8501")
     print(" - FastAPI OpenAPI Docs: http://localhost:8000/docs")
     print("\nPress Ctrl+C to stop servers.\n")
